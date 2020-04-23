@@ -1,0 +1,443 @@
+
+@import "reset_header_footer.scss";
+
+
+
+/*SECTION NOM DU MENU*/
+
+h2
+{
+    align-content: center;
+    font-size: 6vw;
+    font-weight: bold;
+    margin: 5% auto 7% auto;  
+}
+
+.nomdumenu
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        margin-top: 0;
+
+    }
+    img{
+        margin-top: 5%;
+        max-height: 10vw;
+        max-width: 10vw; 
+    }
+
+}
+
+
+/*SECTION MENU*/
+
+
+%titresmenus
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 2vw;
+    margin-bottom: 2%;
+    font-size: 3vw;
+    img{
+        flex:2 1 auto;
+        overflow:hidden;
+    }
+
+}
+
+/*titres des sections de menus avec une image de chaque côté*/
+.titre_entree
+{
+    @extend %titresmenus;   
+}
+
+
+
+.titre_plat
+{ 
+    @extend %titresmenus;   
+}
+
+.titre_dessert
+{
+    @extend %titresmenus;  
+}
+
+/*nom des sections du menu*/
+h3
+{
+    white-space: nowrap;
+    margin: 1%;
+    font-size: 3vw;
+    font-weight: 200;
+    background: linear-gradient(to top, rgba(253, 203, 70, 1) 0%, rgba(253, 203, 70,1) 0.2vw, transparent 0.2vw) no-repeat;
+    background-size: 0 100%;
+    transition: background-size 300ms;
+    &:hover{
+        background-size: 100% 100%;  
+    }
+}
+
+
+.menulanoteenchantee h3
+{
+    font-size: 3vw;  
+}
+
+
+/*nom du menu la note enchantée en bas du menu*/
+h6
+{
+    display: flex;
+    font-size: 4vw;
+    justify-content: center;
+    font-weight: bold;
+    margin-bottom: 10%;
+    img{
+        margin: auto 1%;
+        max-height: 5%;
+        max-width: 5%; 
+    }
+
+}
+
+/*STYLE DES MENUS*/
+
+%stylemenu
+{
+    width: 80vw;
+    height:auto;
+    margin: 4.18vw auto 10vw auto;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    box-shadow: 1px 1px 15px rgb(237, 237, 237);
+    font-family: "Caveat", cursive;
+
+}
+
+.lignemenu
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 2vw;
+    margin: 2% auto;  
+    width: 80%;
+    em
+    {
+        font-weight: bold;
+        margin-right: 3%;
+
+    }
+}
+
+
+/*LA NOTE ENCHANTEE*/
+
+
+.menulanoteenchantee
+{
+    @extend %stylemenu;
+    background-color: rgb(252,223,219);
+    .entrees{
+        margin: 0% 8% 8% 8%;
+    }
+    .plats{
+        @extend .entrees
+            }
+    .desserts{
+        @extend .entrees    
+            }
+}
+
+
+/*LA PALETTE DU GOUT*/
+
+.menulapalettedugout
+{
+    @extend %stylemenu;
+    background-color: rgb(253,253,253);
+    padding-bottom: 15%;  
+    h2{
+        margin: 10% auto 8% auto;
+        padding: 2%;
+        font-family: "Kaushan Script",cursive;
+        font-size: 8vw;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#43973d+0,beff7f+100 */
+        background: #43973d; /* Old browsers */
+        background: -moz-linear-gradient(left,  #43973d 0%, #beff7f 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  #43973d 0%,#beff7f 100%); /*  Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #43973d 0%,#beff7f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43973d', endColorstr='#beff7f',GradientType=1 ); /* IE6-9 */
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip:text;
+    }
+    img{
+        margin: auto 2%;
+    }
+}
+
+
+/*LE CHIC A LA FRANCAISE*/
+
+.menulechicalafrancaise
+{
+    @extend %stylemenu;
+    background-color: white;
+    padding-bottom: 15%;
+    font-family: "Roboto Slab", cursive;  
+    h2{
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e38913+0,ad6caa+50,8f5bfe+100 */
+        background: #e38913; /* Old browsers */
+        background: -moz-linear-gradient(-45deg,  #e38913 0%, #ad6caa 50%, #8f5bfe 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(-45deg,  #e38913 0%,#ad6caa 50%,#8f5bfe 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(135deg,  #e38913 0%,#ad6caa 50%,#8f5bfe 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e38913', endColorstr='#8f5bfe',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip:text;  
+    }
+    .titre_entree{
+        margin: 0 2%;
+    }
+    .entrees{
+        color: rgb(198,116,18);
+    }
+    .plats{
+        color: rgb(165,103,153);  
+    }
+    .desserts{
+        color: rgb(110,76,204);  
+    }
+    h3{
+        font-size: 2.2vw;
+        font-weight: bold;
+    }
+
+}
+
+/*LE DELICE DES PAPILLES*/
+
+
+.menuledelicedespapilles
+{
+    @extend %stylemenu;
+    background-color: rgb(237,239,239);
+    padding-bottom: 15%; 
+    img{
+        margin: 2%;
+    }
+    .lignemenu
+    {
+        font-size:2.3vw;
+    }
+    h2{
+
+        font-family: "Dancing Script",cursive;
+        font-size: 7vw;
+        padding: 2%;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0229dd+0,0889fb+100 */
+        background: #0229dd; /* Old browsers */
+        background: -moz-linear-gradient(left,  #0229dd 0%, #0889fb 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  #0229dd 0%,#0889fb 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  #0229dd 0%,#0889fb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0229dd', endColorstr='#0889fb',GradientType=1 ); /* IE6-9 */
+        -webkit-text-fill-color:transparent;
+        -webkit-background-clip:text;  
+    }
+}
+
+
+/******************/
+/*MENTIONS LEGALES*/
+/******************/
+
+
+
+
+/*MENTIONS LEGALES*/
+
+.pagementionslegales
+{
+    margin: 3% 5% 10% 5%;
+    font-family:'Montserrat', sans-serif;
+    h5{
+        font-size: 3vw;
+        margin: 3% auto;
+    }
+    h6{
+        font-size: 2.5vw;
+        font-weight: 500; 
+    }
+    p{
+        font-size: 1.5vw;
+        margin: 2% auto;
+    }
+    em{
+        font-size:1.7vw;
+        font-weight: bold;
+    }
+    a{
+        color: black;
+    }
+}
+
+/************/
+/*RESPONSIVE*/
+/***********/
+
+
+@media screen and (max-width: 900px)
+{
+
+    /*SECTION NOM DU MENU*/
+
+    h2
+    {
+        align-content: center;
+        font-weight: bold;
+        margin: 5% auto 7% auto;  
+    }
+
+    .nomdumenu
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            margin-top: 0;
+
+        }
+        img{
+            margin-top: 2%;
+            max-height: 15%;
+            max-width: 15%; 
+        }
+
+    }
+
+
+    /*SECTION MENU*/
+
+    h3
+    {
+        font-size: 8vw;  
+    }
+
+
+    /*nom du menu la note enchantée en bas du menu*/
+    h6
+    {  
+        font-size: 8vw;
+        margin-bottom: 10%;
+        img{
+            margin: auto 2%;
+            max-height: 10%;
+            max-width: 10%; 
+        }
+
+    }
+
+    /*STYLE DES MENUS*/
+
+    .lignemenu
+    {
+        display: flex;
+        flex-direction: column;
+        font-size: 4vw;
+        margin: 4vw auto;  
+        width: 95vw;
+        em
+        {
+            font-weight: bold;
+            margin-right: 3%;
+
+        }
+    }
+
+
+    /*LA NOTE ENCHANTEE*/
+
+
+    .menulanoteenchantee
+    {
+        width: 100vw;
+        margin: 8.36vw auto 20vw auto;
+        background-color: rgb(252,223,219);
+        .entrees, .plats, .desserts{
+            margin: 0;
+        }
+        h2{
+            font-size: 12vw;  
+        }
+        h3{
+            font-size: 6vw;
+        }
+    }
+
+
+    /*LA PALETTE DU GOUT*/
+
+    .menulapalettedugout
+    {
+        width: 100vw;
+        margin: 8.36vw auto 20vw auto;
+        img{
+            margin: auto 2%;
+        }
+        h2
+        {
+            font-size: 10vw;
+        }
+    }
+
+
+    /*LE CHIC A LA FRANCAISE*/
+
+    .menulechicalafrancaise
+    {
+
+        width: 100vw;
+        margin: 8.36vw auto 20vw auto;
+        h2{
+            font-size: 8vw;
+        }
+        h3{
+            font-size: 5vw;    
+        }
+
+    }
+
+    /*LE DELICE DES PAPILLES*/
+
+
+    .menuledelicedespapilles
+    {
+        width: 100vw;
+        margin: 8.36vw auto 20vw auto;
+        background-color: rgb(237,239,239);
+        padding-bottom: 15%; 
+        img{
+            margin: 2%;
+        }
+        
+        h2{
+
+            font-size: 10vw;
+          
+        }
+        h3{
+            font-size: 5vw;
+        }
+        p{
+            font-size: 4vw;
+        }
+        em{
+            font-size: 4vw;
+        }
+    }
+}

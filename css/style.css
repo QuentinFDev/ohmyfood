@@ -1,0 +1,333 @@
+/*RESET*/
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul {
+  list-style: none; }
+
+button, input, select, textarea {
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+img, video {
+  height: auto;
+  max-width: 100%; }
+
+iframe {
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0; }
+
+td:not([align]), th:not([align]) {
+  text-align: left; }
+
+a {
+  text-decoration: none; }
+
+/*VARIABLES*/
+/*couleur texte header et footer*/
+/*couleur background header et footer*/
+/*HEADER*/
+header {
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #fdcb46;
+  background-color: #579c87;
+  height: 10.25vw;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
+  header a {
+    color: #fdcb46; }
+    header a h1 {
+      font-size: 7vw;
+      font-weight: bold; }
+
+/*FOOTER*/
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5.86vw;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
+
+#textesfooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #579c87;
+  padding: 2%; }
+  #textesfooter a {
+    color: #fdcb46; }
+  #textesfooter h4 {
+    display: inline-block;
+    font-size: 2.2vw;
+    font-weight: bold;
+    content: "";
+    /*Animation effet wiggle*/ }
+    #textesfooter h4:hover {
+      animation: wiggle 1s;
+      animation-iteration-count: infinite; }
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg); }
+  14.286% {
+    transform: rotate(-3deg); }
+  28.572% {
+    transform: rotate(0deg); }
+  42.856% {
+    transform: rotate(3deg); }
+  57.144% {
+    transform: rotate(0deg); }
+  71.430% {
+    transform: rotate(-3deg); }
+  85.716% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(3deg); } }
+/************/
+/*RESPONSIVE*/
+/***********/
+@media screen and (max-width: 900px) {
+  header {
+    height: 20.50vw; }
+    header a h1 {
+      font-size: 14vw; }
+
+  footer {
+    height: 9vw; }
+
+  #textesfooter a h4 {
+    font-size: 4.4vw; } }
+/*SECTION MENU*/
+#menus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 84vw;
+  margin: 4.18vw 6.7vw 5.86vw 6.7vw; }
+
+.menus_ligne_1, .menus_ligne_2 {
+  display: flex;
+  height: 48.1%;
+  flex-direction: row;
+  justify-content: space-between; }
+
+/*STYLE DES MENUS*/
+.la_note_enchantee p, .le_chic_a_la_francaise p, .le_delice_des_papilles p, .la_palette_du_gout p {
+  font-size: 5vw;
+  margin-bottom: 0%;
+  margin-top: 20%; }
+
+.la_note_enchantee, .le_chic_a_la_francaise, .le_delice_des_papilles, .la_palette_du_gout {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  height: 100%;
+  width: 39.8vw;
+  box-shadow: 1px 1px 15px #ededed; }
+
+.la_note_enchantee {
+  background-color: #fcdfdb; }
+  .la_note_enchantee img {
+    margin: 1% auto;
+    width: 15%;
+    height: 15%; }
+  .la_note_enchantee h2 {
+    font-family: "Caveat", cursive;
+    font-size: 4.8vw;
+    color: black; }
+  .la_note_enchantee p {
+    font-family: "Patrick Hand", cursive;
+    color: black; }
+
+.le_chic_a_la_francaise {
+  background-color: #fff5fe; }
+  .le_chic_a_la_francaise h2 {
+    font-family: "Croissant One",cursive;
+    font-size: 2.7vw;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e38a12+0,a768bc+51,b38cfa+100 */
+    background: #e38a12;
+    /* Old browsers */
+    background: -moz-linear-gradient(-45deg, #e38a12 0%, #a768bc 51%, #b38cfa 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg, #e38a12 0%, #a768bc 51%, #b38cfa 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg, #e38a12 0%, #a768bc 51%, #b38cfa 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e38a12', endColorstr='#b38cfa',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; }
+  .le_chic_a_la_francaise p {
+    font-family: "Roboto Slab", serif;
+    color: #c77412; }
+
+.le_delice_des_papilles {
+  background-color: #f9f9f9; }
+  .le_delice_des_papilles h2 {
+    font-family: "Dancing Script",cursive;
+    font-size: 4vw;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0229dd+0,0889fb+100 */
+    background: #0229dd;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #0229dd 0%, #0889fb 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #0229dd 0%, #0889fb 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #0229dd 0%, #0889fb 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0229dd', endColorstr='#0889fb',GradientType=1 );
+    /* IE6-9 */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; }
+  .le_delice_des_papilles p {
+    font-family: "Patrick Hand", cursive;
+    color: #0887fb; }
+
+.la_palette_du_gout {
+  background-color: #fdfdfd; }
+  .la_palette_du_gout h2 {
+    font-family: "Kaushan Script",cursive;
+    font-size: 4.1vw;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#43973d+0,beff7f+100 */
+    background: #43973d;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #43973d 0%, #beff7f 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #43973d 0%, #beff7f 100%);
+    /*  Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #43973d 0%, #beff7f 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#43973d', endColorstr='#beff7f',GradientType=1 );
+    /* IE6-9 */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text; }
+  .la_palette_du_gout p {
+    font-family: "Patrick Hand", cursive;
+    color: #72bf56; }
+
+/*ANIMATIONS DES TEXTES*/
+img, p, h2 {
+  transition: transform 300ms cubic-bezier(0.48, 0.01, 0.63, 1.02);
+  opacity: 1; }
+  img:hover, p:hover, h2:hover {
+    transform: scale(1.3);
+    opacity: 0.7; }
+
+/*PROCHAINEMENT*/
+.prochainement {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 4.93vw;
+  width: 43.5vw;
+  margin: 3.9vw auto 9.41vw auto;
+  background-color: #579c87;
+  border-radius: 1vw;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
+  .prochainement h3 {
+    font-size: 3.5vw;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #fdcb46; }
+
+/* ANIMATION DES POINTS*/
+.points {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-left: 1%; }
+  .points .point {
+    margin: 0.7vw;
+    width: 1.2vw;
+    height: 1.2vw;
+    border-radius: 50%;
+    background: #fdcb46; }
+    .points .point:nth-child(1) {
+      animation: pulse 3s linear infinite; }
+    .points .point:nth-child(2) {
+      animation: pulse 3s linear infinite 200ms; }
+    .points .point:nth-child(3) {
+      animation: pulse 3s linear infinite 400ms; }
+
+@keyframes pulse {
+  from, 
+    40% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  80%,
+    to {
+    opacity: 1; } }
+/************/
+/*RESPONSIVE*/
+/***********/
+@media screen and (max-width: 900px) {
+  #menus {
+    margin-top: 8vw;
+    height: 410vw; }
+
+  .menus_ligne_1, .menus_ligne_2 {
+    flex-direction: column;
+    height: 200vw;
+    justify-content: space-between; }
+
+  .la_note_enchantee, .le_chic_a_la_francaise, .le_delice_des_papilles, .la_palette_du_gout {
+    height: 95vw;
+    width: 100%; }
+
+  .la_note_enchantee h2 {
+    font-size: 9.6vw; }
+  .la_note_enchantee p {
+    font-size: 10vw; }
+
+  .le_chic_a_la_francaise h2 {
+    font-size: 5.4vw; }
+  .le_chic_a_la_francaise p {
+    font-size: 10vw; }
+
+  .le_delice_des_papilles h2 {
+    font-size: 8vw; }
+  .le_delice_des_papilles p {
+    font-size: 10vw; }
+
+  .la_palette_du_gout h2 {
+    font-size: 8.2vw; }
+  .la_palette_du_gout p {
+    font-size: 10vw; }
+
+  .prochainement {
+    height: 9.86vw;
+    width: 87vw;
+    margin: 7.8vw auto 18.82vw auto; }
+    .prochainement h3 {
+      font-size: 7vw; }
+
+  .points .point {
+    margin: 1.4vw;
+    width: 2.2vw;
+    height: 2.4vw; } }
+
+/*# sourceMappingURL=style.css.map */
