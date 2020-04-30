@@ -165,16 +165,19 @@ h3 {
   font-size: 3vw; }
 
 /*nom du menu la note enchantée en bas du menu*/
-h6 {
+.nomdumenubas {
   display: flex;
-  font-size: 4vw;
+  flex-direction: row;
   justify-content: center;
-  font-weight: bold;
   margin-bottom: 10%; }
-  h6 img {
+  .nomdumenubas img {
     margin: auto 1%;
     max-height: 5%;
     max-width: 5%; }
+
+h6 {
+  font-size: 4vw;
+  font-weight: bold; }
 
 /*STYLE DES MENUS*/
 .menulanoteenchantee, .menulapalettedugout, .menulechicalafrancaise, .menuledelicedespapilles {
@@ -333,13 +336,8 @@ h6 {
     font-size: 8vw; }
 
   /*nom du menu la note enchantée en bas du menu*/
-  h6 {
-    font-size: 8vw;
-    margin-bottom: 10%; }
-    h6 img {
-      margin: auto 2%;
-      max-height: 10%;
-      max-width: 10%; }
+  .nomdumenubas {
+    margin: 5% auto; }
 
   /*STYLE DES MENUS*/
   .lignemenu {
