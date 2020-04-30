@@ -145,30 +145,32 @@
 
 /*ANIMATIONS DES TEXTES*/
 
-%animtextes
+%transitionmenu
 {
     transition: transform 300ms cubic-bezier(.48,.01,.63,1.02);
     opacity: 1; 
-    &:hover{
-        transform: scale(1.3);
-        opacity: 0.7;
+    transform: scale(1.3);
+    opacity: 0.7;
+}
+
+
+
+.menu
+{
+    &:hover img{
+        @extend %transitionmenu;   
     }
+    &:hover h2{
+        @extend %transitionmenu;
+    }
+    &:hover p{
+        @extend %transitionmenu;
+    }
+    
 }
 
-img
-{
-    @extend %animtextes;
-}
 
-p
-{
-    @extend %animtextes;
-}
 
-h2
-{
-    @extend %animtextes;
-}
 
 
 /*PROCHAINEMENT*/

@@ -91,12 +91,11 @@ h3
 
 
 /*nom du menu la note enchantée en bas du menu*/
-h6
+.nomdumenubas
 {
     display: flex;
-    font-size: 4vw;
+    flex-direction: row;
     justify-content: center;
-    font-weight: bold;
     margin-bottom: 10%;
     img{
         margin: auto 1%;
@@ -104,6 +103,12 @@ h6
         max-width: 5%; 
     }
 
+}
+
+h6
+{
+    font-size: 4vw;
+    font-weight: bold;
 }
 
 /*STYLE DES MENUS*/
@@ -330,16 +335,9 @@ h6
 
 
     /*nom du menu la note enchantée en bas du menu*/
-    h6
-    {  
-        font-size: 8vw;
-        margin-bottom: 10%;
-        img{
-            margin: auto 2%;
-            max-height: 10%;
-            max-width: 10%; 
-        }
-
+    .nomdumenubas
+    {   
+        margin: 5% auto;
     }
 
     /*STYLE DES MENUS*/
@@ -424,11 +422,11 @@ h6
         img{
             margin: 2%;
         }
-        
+
         h2{
 
             font-size: 10vw;
-          
+
         }
         h3{
             font-size: 5vw;
