@@ -177,7 +177,8 @@ h3:hover {
 
 h6 {
     font-size: 4vw;
-    font-weight: bold; }
+    font-weight: bold;
+    white-space: nowrap;}
 
 /*STYLE DES MENUS*/
 .menulanoteenchantee, .menulapalettedugout, .menulechicalafrancaise, .menuledelicedespapilles {
